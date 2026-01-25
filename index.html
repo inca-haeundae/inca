@@ -147,21 +147,32 @@
 
     <!-- Formspree 폼 -->
     <form
-      action="https://formspree.io/f/mjgydbnz"
+      action="https://api.staticforms.xyz/submit"
       method="POST"
     >
     <input
     type="hidden"
-    name="_redirect"
+    name="accessKey"
+    value="sf_gm02b8187bh61nkk6jn3hm4b"
+  />
+    <input
+    type="hidden"
+    name="redirectTo"
     value="https://inca-haeundae.github.io/inca/thankyou.html"
   />
+  <input
+  type="text"
+  name="honeypot"
+  style="display:none"
+/>
       <label>
         이름
         <input type="text" name="name" required />
       </label>
       <label>
         연락처
-        <input type="tel" name="phone" required />
+        <input type="tel" name="phone" required pattern="^01[016789]-?\d{3,4}-?\d{4}$"
+        placeholder="010-1234-5678" />
       </label>
       <label>
         문의내용
