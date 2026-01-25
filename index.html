@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>인카금융서비스 해운대점</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        background: #304967;
+        font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans KR',
+          system-ui, sans-serif;
+      }
+
+      .wrapper {
+        width: 100%;
+        max-width: 420px;
+        background: #304967;
+      }
+
+      .landing-image {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .cta-area {
+        padding: 16px;
+        background: #304967;
+      }
+
+      .cta-button {
+        width: 100%;
+        border: none;
+        border-radius: 4px;
+        padding: 15px;
+        font-size: 18px;
+        font-weight: 700;
+        background: #f9a825;
+        color: #111;
+        cursor: pointer;
+      }
+
+      /* 팝업 모달 */
+      .modal-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+      }
+
+      .modal {
+        width: 90%;
+        max-width: 420px;
+        background: #061729;
+        border-radius: 8px;
+        padding: 18px 16px 20px;
+        color: #fff;
+      }
+
+      .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .modal-title {
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      .modal-close {
+        border: none;
+        background: transparent;
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+        line-height: 1;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      label {
+        font-size: 13px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      input,
+      textarea {
+        padding: 8px 10px;
+        border-radius: 4px;
+        border: none;
+        font-size: 13px;
+      }
+
+      .form-submit {
+        margin-top: 8px;
+        padding: 10px;
+        border-radius: 4px;
+        border: none;
+        font-size: 15px;
+        font-weight: 700;
+        background: #f9a825;
+        color: #111;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- 랜딩 이미지 -->
+      <img
+        src="./landing.png"
+        alt="인카금융서비스 해운대점 랜딩페이지"
+        class="landing-image"
+      />
+
+      <!-- 폼 열기 버튼 -->
+      <div class="cta-area">
+        <button id="openFormButton" class="cta-button">
+          입사문의 신청하기
+        </button>
+      </div>
+    </div>
+
+<!-- 팝업 모달 -->
+<div id="modalOverlay" class="modal-overlay">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title">입사 문의 남기기</div>
+      <button id="closeModalButton" class="modal-close" aria-label="닫기">
+        ×
+      </button>
+    </div>
+
+    <!-- Formspree 폼 -->
+    <form
+      action="https://formspree.io/f/mjgydbnz"
+      method="POST"
+    >
+      <label>
+        이름
+        <input type="text" name="name" required />
+      </label>
+      <label>
+        연락처
+        <input type="tel" name="phone" required />
+      </label>
+      <label>
+        문의내용
+        <textarea name="message" rows="3"></textarea>
+      </label>
+      <button type="submit" class="form-submit">문의 보내기</button>
+    </form>
+  </div>
+</div>
+
+
+    <script>
+      const openBtn = document.getElementById('openFormButton');
+      const modalOverlay = document.getElementById('modalOverlay');
+      const closeBtn = document.getElementById('closeModalButton');
+
+      function openModal() {
+        modalOverlay.style.display = 'flex';
+      }
+
+      function closeModal() {
+        modalOverlay.style.display = 'none';
+      }
+
+      openBtn.addEventListener('click', openModal);
+      closeBtn.addEventListener('click', closeModal);
+
+      modalOverlay.addEventListener('click', (e) => {
+        if (e.target === modalOverlay) {
+          closeModal();
+        }
+      });
+    </script>
+  </body>
+</html>
