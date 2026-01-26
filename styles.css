@@ -1,6 +1,5 @@
 body {
     margin: 0;
-    display: flex;
     justify-content: center;
     background: #304967;
     font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans KR',
@@ -11,6 +10,7 @@ body {
     width: 100%;
     max-width: 420px;
     background: #304967;
+    margin: 0 auto; 
   }
   
   .landing-image {
@@ -140,5 +140,20 @@ body {
     background: #f9a825;
     color: #111;
     cursor: pointer;
+  }
+  .site-footer {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 16px 12px 24px;
+    box-sizing: border-box;
+    font-size: 11px;
+    line-height: 1.5;
+    color: #b0b0b0;
+    background: #304967;      /* 배경이랑 맞추기 */
+  }
+  
+  .site-footer p {
+    margin: 0;
   }
   
