@@ -141,7 +141,7 @@ body {
     color: #111;
     cursor: pointer;
   }
-  .site-footer {
+  /* .site-footer {
     width: 100%;
     max-width: 420px;
     margin: 0 auto;
@@ -150,10 +150,34 @@ body {
     font-size: 11px;
     line-height: 1.5;
     color: #b0b0b0;
-    background: #304967;      /* 배경이랑 맞추기 */
+    background: #304967;      
+  }
+  
+  .site-footer p {
+    margin: 0;
+  } */
+  .site-footer {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 20px 24px 32px;
+    box-sizing: border-box;
+    font-size: 10px;
+    line-height: 1.6;
+    color: #b0b0b0;
+    background: #304967;          /* 이미지와 비슷한 어두운 브라운 계열이면 맞춰서 수정 */
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
   }
   
   .site-footer p {
     margin: 0;
   }
   
+  .footer-left,
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
