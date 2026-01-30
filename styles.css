@@ -32,11 +32,11 @@ body {
     font-size: 18px;
     font-weight: 700;
     background: #f9a825;
-    color: #111;
+    color: #040404;
     cursor: pointer;
   }
   
-  /* 팝업 모달 */
+  /* 팝업 */
   .modal-overlay {
     position: fixed;
     inset: 0;
@@ -100,7 +100,7 @@ body {
     font-size: 13px;
   }
   
-  /* 개인정보 동의 영역 */
+  /* 개인정보 동의 */
   .agree-box {
     margin-top: 8px;
     font-size: 12px;
@@ -165,7 +165,7 @@ body {
     font-size: 10px;
     line-height: 1.6;
     color: #b0b0b0;
-    background: #304967;          /* 이미지와 비슷한 어두운 브라운 계열이면 맞춰서 수정 */
+    background: #304967;        
     display: flex;
     justify-content: space-between;
     gap: 40px;
